@@ -3,7 +3,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import { Badge } from '@/shared/ui/badge';
-import { Palette, Server } from 'lucide-react';
+import { Cloud, Palette, Server } from 'lucide-react';
 import { cn } from '@/shared/lib/utils';
 
 interface SkillItem {
@@ -35,7 +35,15 @@ const skills: SkillItem[] = [
                   ship without anyone touching it manually.`,
     icon: <Server className="w-10 h-10" />,
     tags: ["Pipeline Automation", "Artifact Management", "build Automation"]
-  }
+  },
+  {
+    title: "AWS Cloud Infrastructure",
+    bgTitle: "Cloud",
+    description: `I design and manage cloud environments on AWS — provisioning EC2 instances with the right sizing, structuring S3 buckets with proper lifecycle policies, and locking down access through fine-grained IAM roles and policies. CloudWatch sits on top of everything, giving me real-time visibility into what's 
+    running and alerting me before things break. The goal isn't just to get things running in the cloud — it's to make sure they stay running, stay secure, and stay observable without constant manual intervention.`,
+    icon: <Cloud className="w-10 h-10" />,
+    tags: ["EC2 & Compute", "S3 & Storage", "IAM & Policies"]
+  },
 ];
 
 const SkillCard = ({
